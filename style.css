@@ -1,0 +1,110 @@
+*{ margin:0;
+   padding:0;
+   font-family:verdana;
+}
+
+header{ width:100%;
+       height:100vh;
+       background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(pic3.jpg);;
+       background-size:cover;
+       background-position:center;}
+
+
+.main-nav{ float:right;
+        list-style:none;
+        margin-top:30px;}
+
+.main-nav li{ 
+           display:inline-block;}
+
+.main-nav li a{ text-decoration: none;
+             color:white;
+             padding:5px 20px;
+             font-family:"Roboto,sans-serif;
+             font-size:15px;
+ }           
+
+.main-nav li.active a
+          {  border:1px solid white;}
+ 
+.main-nav li a:hover{
+         border: 1px solid white;
+}
+
+.logo img{ width:80px;
+           height:auto;
+           float:left;}
+
+.row{ max-width:1200px;
+      margin:auto;}
+
+.hero{position:absolute;
+      width:100%;
+      margin-left:0px;
+      margin-top:275px;}
+
+.hero1{position:absolute;
+      width:100%;
+      margin-left:0px;
+      margin-top:175px;}
+	  
+	  
+.button{margin-top:30px;}
+
+
+.btn{border:1px solid white;
+     padding:10px 30px;
+     color:white;
+     text-decoration:none;
+     margin-right:5px;
+     font-size:17px;
+     text-transform:uppercase;}
+
+.btn-one,.btn-two,.btn-three,.btn-four{font-family:"Roboto",sans-serif;
+         background-color:darkorange;}
+
+
+.btn-one:hover,
+.btn-two:hover,
+.btn-three:hover,
+.btn-four:hover
+{background-color:transparent;
+               transition:all 0.5s ease-in;}
+			   
+			   
+.tablee{color:#F2E3E3;
+      border:1px solid white;
+	  font-size:20px;
+	  }
+
+.tablee1{color:#F2E3E3;
+	  font-size:20px;}
+	  
+.tdd{border:1px solid white;
+     text-align:center;
+	 padding:10px;
+	 }
+	 
+.tdd1{
+     text-align:left;
+	 padding:10px;
+	 margin:10px;
+	 }
+	 
+.tdd12 input {
+    width: 100%;
+    box-sizing: border-box;
+	text-align:left;
+	 padding:10px;
+	 margin:1px;
+}
+
+.tdd12 input:hover,
+.tdd12 input:hover{
+	background:#efed40;
+	color:#262626;
+}
+	 
+
+.color{color:#F3E2E2;}
+

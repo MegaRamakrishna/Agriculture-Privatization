@@ -1,0 +1,79 @@
+CREATE TABLE farmer(
+    f_id INT(6) NOT NULL CHECK (f_id) > 2009,
+    f_name VARCHAR(15) NOT NULL,
+    address STRING(100),
+    sex VARCHAR(1),
+    dateofbirth DATE,
+    r_id INT(6) NOT NULL,
+    password VARCHAR(15) NOT NULL,
+    PRIMARY KEY (f_id),
+    FOREIGN KEY (r_id) REFERENCES region(r_id)
+	
+);
+	
+CREATE TABLE employee(
+	emp_id INT(6) NOT NULL,
+	e_name VARCHAR(15) NOT NULL,
+	address STRING(100),
+    sex VARCHAR(1),
+    dateofbirth DATE,
+	salary INT(7) NOT NULL,
+	d_id INT(3) NOT NULL,
+	PRIMARY KEY (emp_id),
+	FOREIGN KEY (d_id) REFERENCES department(d_id)
+	);
+	
+CREATE TABLE department(
+	d_id INT(3) NOT NULL,
+	d_name VARCHAR(15) NOT NULL,
+	quota INT(10),
+	mgr_id INT(6) NOT NULL,
+	PRIMARY KEY (d_id),
+	FOREIGN KEY (mgr_id) REFERENCES employee(emp_id)
+	);
+	
+CREATE TABLE crop(
+	c_name VARCHAR(20) NOT NULL,
+	avg_mp INT(4) NOT NULL,
+	PRIMARY KEY (c_name),
+	);
+	
+CREATE TABLE region(
+	r_id INT(6) NOT NULL,
+	r_name VARCHAR(15) NOT NULL,
+	city VARCHAR(15),
+	PRIMARY KEY (r_id),
+	);
+	
+CREATE TABLE financialhelp(
+	f_id INT(6) NOT NULL,
+	emp_id INT(6) NOT NULL,
+	issuedate DATE NOT NULL,
+	interest_rate DECIMAL(5,3) NOT NULL,
+	PRIMARY KEY (f_id,emp_id,date),
+	FOREIGN KEY (f_id) REFERENCES farmer(f_id),
+	FOREIGN KEY (emp_id) REFERENCES employee(emp_id)
+	);
+
+CREATE TABLE cropdecisionmaking (
+	f_id INT(6) NOT NULL,
+	emp_id INT(6) NOT NULL,
+	c_name VARCHAR(20) NOT NULL,
+	f_proposal INT(4) NOT NUL,
+	finalprice INT(4) NOT NULL,
+	PRIMARY KEY (f_id,emp_id,c_name,f_proposal),
+	FOREIGN KEY (f_id) REFERENCES farmer(f_id),
+	FOREIGN KEY (emp_id) REFERENCES employee(emp_id),
+	FOREIGN KEY (c_name) REFERENCES crop(c_name)
+);    
+
+CREATE TABLE camps (
+	r_id INT(6) NOT NULL,
+	emp_id INT(6) NOT NULL,
+	startdate DATE NOT NULL,
+	duration INT(3) NOT NULL,
+	PRIMARY KEY (r_id,emp_id,startdate),
+	FOREIGN KEY (r_id) REFERENCES region(r_id),
+	FOREIGN KEY (emp_id) REFERENCES employee(emp_id)
+);
+

@@ -1,0 +1,182 @@
+*{
+  margin:0;
+ }
+ 
+ html,body{
+    height:100%;
+	}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin-bottom:20px;}
+	
+
+nav{width:100%;
+    height:50px;
+	background-color:rgba(0,0,0,0.5);
+	position:fixed;
+	z-index:99;
+	text-align:center;
+	}
+	
+nav a{
+	text-decoration:none;
+	color:#fff;
+	margin-left:30px;
+	line-height:50px;
+}
+
+nav a:hover{
+	text-decoration:none;
+	color:black;
+	margin-left:30px;
+	line-height:50px;
+	font-size:125%;
+}
+
+.section{
+	height:100%;
+    background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment:fixed;}
+	
+.subsection{
+	height:50%;
+    background-color:bisque;}
+	
+
+.sectone{
+    background-image:url(picccc.jpeg);}
+	
+.secttwo{
+    background-image:url(piccc.jpeg);}
+	
+	
+	
+
+
+
+.loginbox{
+position:absolute;
+top:200%;
+left:30%;
+transform:translate(-50%,-50%);
+width:350px;
+height:420px;
+padding-left:40px;
+padding-right:40px;
+padding-top:80px;
+box-sizing:border-box;
+background:rgba(0,0,0,.5);
+}
+
+.loginbox1{
+position:absolute;
+top:200%;
+left:70%;
+transform:translate(-50%,-50%);
+width:350px;
+height:420px;
+padding:80px 40px;
+box-sizing:border-box;
+background:rgba(0,0,0,.5);
+}
+
+.user{
+	width:100px;
+	height:100px;
+	border-radius:50%;
+	overflow:hidden;
+	position:absolute;
+	top:calc(-100px/2);
+	left:calc(50% - 50px);
+}
+
+.h2{margin:0;
+   padding:0 0 20px;
+   color:#efed40;
+   text-align:center;
+}
+
+.loginbox p,.loginbox1 p{
+	margin:0;
+	padding:0;
+	font-weight:bold;
+	color:#fff;
+}
+
+.loginbox input,.loginbox1 input{
+	width:100%;
+	margin-bottom:20px;
+}
+
+.loginbox input[type="number"],
+.loginbox input[type="password"],
+.loginbox1 input[type="number"],
+.loginbox1 input[type="password"]{
+	border:none;
+	border-bottom:1px solid #fff;
+	background:transparent;
+	outline:none;
+	height:40px;
+	color:#fff;
+	font-size:16px;
+}
+
+::placeholder{
+	color: rgba(255,255,255,.5)
+}
+
+.loginbox input[type="submit"],
+.loginbox1 input[type="submit"]{
+	border:none;
+	outline:none;
+	height:40px;
+	color:#fff;
+	font-size:16px;
+	background:#ff267e;
+    cursor:pointer;
+	border-radius:20px;
+	}
+	
+.loginbox input:hover,
+.loginbox1 input:hover{
+	background:#efed40;
+	color:#262626;
+}
+
+.tablecrop{
+width:50%;
+align:center;
+margin-top:10%;
+
+}
+
+
+.home{
+	padding-top:20%;
+	color:#000000;
+}
+
+.services{
+    padding-top:3%;}
+	
+.fieldset1{
+	margin-left:10%;
+	width:20%;
+	height:40%;
+	display:inline-block;}
+
+.fieldset2{
+	margin-left:10%;
+	width:20%;
+    height:40%;
+	display:inline-block;}
+
+.fieldset3{
+    margin-left:10%;
+	width:20%;
+    height:40%;
+	display:inline-block;}	
+    
+.contact{
+    padding-top:7%;}
